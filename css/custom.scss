@@ -11,7 +11,7 @@ body {
   background-color: #DDDDDD;
   /*The fixed navbar will overlay your other content, unless you add padding to the top of the <body>.
   Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.*/
-  padding-top: 70px;
+  padding-top: 60px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   color: black;
@@ -20,6 +20,7 @@ body {
 
 .container.image-holder {
   background: url(../img/Laptop_Desk_Image.jpg) no-repeat;
+  // Ensure entire viewport was filled
   background-size: 100% 100%;
   background-attachment: fixed;
   -webkit-background-size:cover;
@@ -99,6 +100,13 @@ footer {
   padding: 0; }
 
 /* END NAVBAR CSS*/
+
+/*Needed to make this declaration more specific than just 'input'*/
+input.form-control {
+  height: 50px;
+}
+
+
 /* START LISTS CSS */
 li {
   margin-top: 5px;
