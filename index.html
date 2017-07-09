@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>List&#8211;O&#8211;Rama</title>
+	<!-- Webpage author -->
+	<meta content="John Jordan" name="author">
+	<!-- Description of page -->
+	<meta content="A simple to&#8211;do list web application that allows the user to create and modify a list of tasks" name="description">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="img/ListORama_Logo.png">
+	<!-- Link to Source Sans Pro in regular and bold weights from Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+	<!-- Link to minified Bootstrap CSS file -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- Link to custom CSS file that overwrites default Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<!-- Link to FontAwesome from CDN  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha384-qFIkRsVO/J5orlMvxK1sgAt2FXT67og+NyFTITYzvbIP1IJavVEKZM7YWczXkwpB" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
+    <![endif]-->
+    <style>
+		/** {border: 1px solid black;}*/
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container fixed-nav">
+			<!-- Removed this wrapper div with class navbar-header as it prevented image from beng centered -->
+			<!-- <div class="navbar-header"> -->
+			<!-- Needed to apply class of col-xs-2 to a element to ensure proper image sizing -->
+				<a href="#" class="col-xs-12">
+					<img src="img/ListORama_ComboLogo.png" class="img-responsive center-block" alt="The List-O-Rama logo">
+				</a>
+				<!-- <h1 class="col-xs-8 col-md-10 text-center">List&#8211;O&#8211;Rama</h1> -->
+			<!-- </div> -->
+			<!-- end of removed wrapper div -->
+		</div>
+	</nav>
+	<div class="container image-holder">
+		<section class="row user-input">
+			<!-- start of wrapper div -->
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+				<h2 >Create a new list item</h2>
+				<!-- Form element contains input field that is used to create new list items -->
+				<form action="#"  id="list-creator">
+					<div class="form-group">
+						<p>Please enter your task in the following text-box, then press the &#8220;Add to List&#8221; button to add it to your to-do list.</p>
+						<input type="text" id="new-task-content" class="form-control" placeholder="Your text here" required="">
+						<button class="btn btn-block  btn-success" type="submit">Add to List</button>
+					</div>
+				</form>
+			</div><!-- end of wrapper div -->
+
+		</section>
+		<br>
+		<br>
+		<section class="row todos">
+			<!-- Wrapper div applied for layout purposes -->
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3" id="task-list-container">
+
+				<h2 >Your Tasks</h2>
+				<!-- This placeholder message is hidden/shown using jQuery -->
+				<p id='empty-list-message'>Your list is empty - please add a to-do item using the input box above.</p>
+				<ul class="list-group" id="task-list">
+
+
+				</ul>
+				<button class="btn btn-block btn-warning" id="clearChecked">
+					Clear checked tasks
+				</button>
+			</div>
+		</section>
+		<br>
+		<br>
+		<footer class="row">
+			<!-- hr element takes width from parent container -->
+			<hr>
+			<section class="col-xs-12 col-sm-6 col-sm-offset-3">
+				<h6>Author Information</h6>
+
+				<!-- Flow content, such as text and time element is permitted within address element as per MDN -->
+				<address>
+					&#8220;List-O-Rama&#8221; website created by <a href="mailto:john.jordan@digitalskillsacademy.me">John Jordan</a> in <time datetime="2017-06">June/July 2017</time>.
+					<br>
+					Copyright © John Jordan<span id="copyright-year">2015</span>
+				</address>
+			</section>
+			<!-- end address footer section -->
+		</footer>
+	</div>
+
+	<!-- Load minified jQuery library from third-party -->
+	<script  src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
+	<!-- Load minified Bootstrap JS file -->
+	<script type="text/javascript" src="js/Bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

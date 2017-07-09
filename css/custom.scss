@@ -1,0 +1,171 @@
+/* Custom CSS */
+
+$fallback_gray: #AAAAAA;
+$overlay_colour: rgba(200,200,200,0.4);
+$fadeOutDuration: 1s;
+
+html {
+  height: 100%;
+}
+body {
+  background-color: #DDDDDD;
+  /*The fixed navbar will overlay your other content, unless you add padding to the top of the <body>.
+  Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.*/
+  padding-top: 70px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  color: black;
+  height: 100%;
+}
+
+.container.image-holder {
+  background: url(../img/Laptop_Desk_Image.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size: cover;
+  -webkit-box-shadow: 0 10px 5px 2px #999999;
+  box-shadow: 0 10px 5px 2px #999999;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top, .fixed-nav {
+  background-color: #FFFFFF;
+  /* Adjusted shadows as horizontal shadow created a pseudo-border on nav element */
+  -webkit-box-shadow: 0 1px 0px 0px #999999;
+  box-shadow: 0 1px 0px 0px #999999;
+}
+
+section > div {
+  background-color: $fallback_gray;
+  background-color: $overlay_colour;
+}
+
+section.user-input {
+  /*Adds margin to top of first element, as fixed header would overlay it otherwise*/
+  margin-top: 50px; }
+
+section.todos {
+  margin-top: 15px; }
+
+header {
+  margin: 0 0 20px 0;
+  /* add a margin on 20px to the bottom
+  - remember - top right bottom left */
+  padding: 30px;
+  /* padding of 30px all around */ }
+
+header h1 {
+  color: #9a9292;
+  /* change colour of text */
+  font-size: 500%;
+  /* increase font size to 500% of default  */
+  text-align: center;
+  /* centre text*/
+  font-family: 'Gafata', sans-serif; }
+
+h1 {
+  /*margin-top: 40px;*/
+  white-space: normal !important;
+  word-wrap: break-word; }
+
+h2, p, footer {
+  /*font-family: 'Source Sans Pro';*/
+  /*background-color: #AAAAAA;
+  background-color: rgba(200, 200, 200, 0.7); */
+}
+
+footer {
+  font-size: 12px;
+
+}
+
+.container .fixed-nav {
+  border: none;
+}
+
+/* START NAVBAR CSS*/
+.navbar-header img {
+  float: left;
+  margin-top: 15px; }
+
+.navbar.navbar-default.navbar-fixed-top {
+  background-color: #FFFFFF; }
+
+/* The next two classes ensure that brand images in the nav bar are contained within the navbar itself */
+.navbar-brand {
+  margin: 0;
+  padding: 0; }
+
+/* END NAVBAR CSS*/
+/* START LISTS CSS */
+li {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+span {
+  margin-right: 20px; }
+
+li > h4 {
+  margin-left: 35px; }
+
+/*Next two declarations are used because I couldn't get the HTML span approach to work. Found approach on
+https://stackoverflow.com/questions/28587943/align-text-beside-fontawesome-icon */
+li.custom-icon:before {
+  font-family: fontAwesome;
+  font-size: 1.75em;
+  content: '\f096';
+  position: absolute;
+  /*16 pixels to left to stay in line with other Bootstrap elements*/
+  left: 16px;
+  /* Places the square dot at the space created by the LI padding */
+  top: 11px; }
+
+li.custom-icon.checked:before {
+  content: '\f046';
+  position: absolute;
+  /*16 pixels to left to stay in line with other Bootstrap elements*/
+  left: 16px;
+  /* Places the square dot at the space created by the LI padding */
+  top: 11px; }
+
+li.checked div label {
+  /* Applies a strike through effect to the label elements of those list items that have been clicked on and marked as checked by the user.
+  I had been using jQuery to query the DOM and apply the class "checked" to the child label elements, but using CSS was much more efficient
+  */
+  text-decoration: line-through; }
+
+/* END LISTS CSS */
+.btn {
+  margin-top: 10px;
+  margin-bottom: 5px; }
+
+#clearChecked {
+  /*This button hidden by default*/
+  display: none;
+}
+
+/*I created this class, as the default jQuery fadeOut etc wasn't working. This custom class is applied to the checked list items Once
+the 'Clear Checked' button is pressed by the user*/
+
+.fadeOut {
+  animation-name: animate;
+  animation-duration: $fadeOutDuration;
+  /*Once animation plays, it stops on the last frame, i.e. div has disappeared*/
+  animation-fill-mode: forwards;
+  /*Create effect where animation picks up speed as it runs*/
+  animation-timing-function: ease-out;
+}
+
+@keyframes animate {
+  from{
+
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=custom.css.map */
