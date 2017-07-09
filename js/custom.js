@@ -182,7 +182,6 @@ $clearCheckedButton.click(function(){
 		}
 
 		if ($listItems.length === 0) {
-			console.log($emptyListMessage);
 			$clearCheckedButton.slideUp();
 			// This line didn't actually show the empty-task message
 			// $emptyListMessage.show();
