@@ -188,7 +188,7 @@ $clearCheckedButton.click(function(){
 			// First clear the previous empty-list-message
 			$("#empty-list-message").remove();
 			// Instead, manually appended the element to the empty unordered list
-			$("#task-list-container").append("<p id='empty-list-message'>Your list is empty - please add a to-do item using the input box above.</p>")
+			$("#task-list-container").append("<p id='empty-list-message'>Hurrah! You have nothing left to do – or so it seems.</p>")
 		}
 
 	}, 1200);
