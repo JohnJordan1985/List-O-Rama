@@ -36,8 +36,13 @@ nav.navbar.navbar-default.navbar-fixed-top, .fixed-nav {
   box-shadow: 0 1px 0px 0px #999999; }
 
 section > div {
+  margin-bottom: 32px;
   background-color: #AAAAAA;
   background-color: rgba(240, 240, 240, 0.75); }
+
+  footer {
+    background-color: #AAAAAA;
+    background-color: rgba(240, 240, 240, 0.75); }
 
 section.user-input {
   /*Adds margin to top of first element, as fixed header would overlay it otherwise*/
