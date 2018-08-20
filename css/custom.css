@@ -41,6 +41,7 @@ section > div {
   background-color: rgba(240, 240, 240, 0.75); }
 
   footer {
+    padding-top: 16px;
     background-color: #AAAAAA;
     background-color: rgba(240, 240, 240, 0.75); }
 
