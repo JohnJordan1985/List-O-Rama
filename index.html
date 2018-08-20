@@ -8,9 +8,10 @@
 	<!-- Description of page -->
 	<meta content="A simple to&#8211;do list web application that allows the user to create and modify a list of tasks" name="description">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="img/ListORama_Logo.png">
-	<!-- Link to Source Sans Pro in regular and bold weights from Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<!-- Link to Muli in light and bold weights from Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,700" rel="stylesheet">
 	<!-- Link to minified Bootstrap CSS file -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<!-- Link to custom CSS file that overwrites default Bootstrap CSS -->
@@ -34,7 +35,7 @@
 			<!-- <div class="navbar-header"> -->
 			<!-- Needed to apply class of col-xs-2 to a element to ensure proper image sizing -->
 				<a href="#" class="col-xs-12">
-					<img src="img/ListORama_ComboLogo.png" class="img-responsive center-block" alt="The List-O-Rama logo">
+					<img src="img/ListORama_Logo.png" class="img-responsive center-block logo" alt="The List-O-Rama logo">
 				</a>
 				<!-- <h1 class="col-xs-8 col-md-10 text-center">List&#8211;O&#8211;Rama</h1> -->
 			<!-- </div> -->
@@ -44,13 +45,13 @@
 	<div class="container image-holder">
 		<section class="row user-input">
 			<!-- start of wrapper div -->
-			<div class="col-xs-12 col-sm-6 col-sm-offset-3">
-				<h2 >Create a new list item</h2>
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 margin-top">
+				<h2 >Create a New Task</h2>
 				<!-- Form element contains input field that is used to create new list items -->
 				<form action="#"  id="list-creator">
 					<div class="form-group">
-						<p>Please enter your task in the following text-box, then press the &#8220;Add to List&#8221; button to add it to your to-do list.</p>
-						<input type="text" id="new-task-content" class="form-control" placeholder="Your text here" required="">
+						<p>Enter a task, then press “Add to List”!</p>
+						<input type="text" id="new-task-content" class="form-control" placeholder="Your task here.." required="">
 						<button class="btn btn-block  btn-success" type="submit">Add to List</button>
 					</div>
 				</form>
@@ -65,7 +66,7 @@
 
 				<h2 >Your Tasks</h2>
 				<!-- This placeholder message is hidden/shown using jQuery -->
-				<p id='empty-list-message'>Your list is empty - please add a to-do item using the input box above.</p>
+				<p id='empty-list-message'>Hurrah! You have nothing left to do – or so it seems.</p>
 				<ul class="list-group" id="task-list">
 
 
@@ -75,8 +76,6 @@
 				</button>
 			</div>
 		</section>
-		<br>
-		<br>
 		<footer class="row">
 			<!-- hr element takes width from parent container -->
 			<hr>
@@ -85,7 +84,7 @@
 
 				<!-- Flow content, such as text and time element is permitted within address element as per MDN -->
 				<address>
-					&#8220;List-O-Rama&#8221; website created by <a href="mailto:john.jordan@digitalskillsacademy.me">John Jordan</a> in <time datetime="2017-06">June/July 2017</time>.
+					&#8220;List-O-Rama&#8221; website created by <a href="mailto:john.jordan@digitalskillsacademy.me">John Jordan</a> in <time datetime="2017-06">June/July 2017</time>, as part of a university design workshop.
 					<br>
 					Copyright © John Jordan<span id="copyright-year">2015</span>
 				</address>

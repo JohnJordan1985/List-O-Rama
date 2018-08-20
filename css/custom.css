@@ -1,16 +1,20 @@
 /* Custom CSS */
 html {
-  height: 100%; }
+  height: 100%;
+  min-height: 100vh;}
 
 body {
   background-color: #DDDDDD;
   /*The fixed navbar will overlay your other content, unless you add padding to the top of the <body>.
   Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.*/
-  padding-top: 60px;
-  font-family: 'Source Sans Pro', sans-serif;
+  /*padding-top: 60px;*/
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
   font-size: 16px;
   color: black;
-  height: 100%; }
+  height:auto;
+  min-height: 100vh;
+  overflow: scroll;}
 
 .container.image-holder {
   background: url(../img/Laptop_Desk_Image.jpg) no-repeat;
@@ -21,7 +25,9 @@ body {
   -o-background-size: cover;
   background-size: cover;
   -webkit-box-shadow: 0 10px 5px 2px #999999;
-  box-shadow: 0 10px 5px 2px #999999; }
+  box-shadow: 0 10px 5px 2px #999999;
+  height:auto;
+    min-height: 100vh;}
 
 nav.navbar.navbar-default.navbar-fixed-top, .fixed-nav {
   background-color: #FFFFFF;
@@ -31,7 +37,7 @@ nav.navbar.navbar-default.navbar-fixed-top, .fixed-nav {
 
 section > div {
   background-color: #AAAAAA;
-  background-color: rgba(200, 200, 200, 0.4); }
+  background-color: rgba(240, 240, 240, 0.75); }
 
 section.user-input {
   /*Adds margin to top of first element, as fixed header would overlay it otherwise*/
@@ -40,12 +46,21 @@ section.user-input {
 section.todos {
   margin-top: 15px; }
 
+  .logo {
+    max-height: 66px;
+    margin: 16px auto;
+  }
+
 header {
   margin: 0 0 20px 0;
   /* add a margin on 20px to the bottom
   - remember - top right bottom left */
   padding: 30px;
   /* padding of 30px all around */ }
+
+  .margin-top {
+    margin-top: 64px;
+  }
 
 header h1 {
   color: #9a9292;
@@ -54,7 +69,7 @@ header h1 {
   /* increase font size to 500% of default  */
   text-align: center;
   /* centre text*/
-  font-family: 'Gafata', sans-serif; }
+  font-family: 'Muli', sans-serif; }
 
 h1 {
   /*margin-top: 40px;*/
@@ -66,6 +81,9 @@ h2, p, footer {
   /*background-color: #AAAAAA;
   background-color: rgba(200, 200, 200, 0.7); */ }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
 footer {
   font-size: 12px; }
 
@@ -114,6 +132,7 @@ li.custom-icon:before {
   top: 11px; }
 
 li.custom-icon.checked:before {
+  color: #F0AD4E; /* Warning colour, from Bootstrap defaults */
   content: '\f046';
   position: absolute;
   /*16 pixels to left to stay in line with other Bootstrap elements*/
