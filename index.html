@@ -28,65 +28,60 @@
 		/** {border: 1px solid black;}*/
     </style>
 </head>
-<body >
+<body class="image-holder text-center" >
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<img src="img/ListORama_Logo.png" class="navbar-logo" alt="The List-O-Rama logo">
 	</nav>
-	<div class="image-holder text-center">
-		<main class="bg-main" >
-			<section class=" margin-top user-input">
-				<h2 >Create a New Task</h2>
-				<!-- Form element contains input field that is used to create new list items -->
-				<form action="#"  id="list-creator">
-					<div class="form-group">
-						<p>Enter a task, then press “Add to List”!</p>
-						<input type="text" id="new-task-content" class="form-control" placeholder="Your task here.." required="">
-						<button class="btn btn-block  btn-success" type="submit">Add to List</button>
-					</div>
-				</form>
-			</section>
-
-
-			<section class="todos">
-				<!-- Wrapper div applied for layout purposes -->
-				<div class="" id="task-list-container">
-
-					<h2 >Your Tasks</h2>
-					<!-- This placeholder message is hidden/shown using jQuery -->
-					<p id='empty-list-message'>Hurrah! You have nothing left to do – or so it seems.</p>
-					<ul class="list-group" id="task-list">
-
-
-					</ul>
-					<button class="btn btn-block btn-warning" id="clearChecked">
-						Clear checked tasks
-					</button>
+	<main class="bg-main" >
+		<section class=" margin-top user-input">
+			<h2 >Create a New Task</h2>
+			<!-- Form element contains input field that is used to create new list items -->
+			<form action="#"  id="list-creator">
+				<div class="form-group">
+					<p>Enter a task, then press “Add to List”!</p>
+					<input type="text" id="new-task-content" class="form-control" placeholder="Your task here.." required="">
+					<button class="btn btn-block  btn-success" type="submit">Add to List</button>
 				</div>
-			</section>
+			</form>
+		</section>
 
-		</main>
-		<footer>
-			<!-- hr element takes width from parent container -->
-			<section class="footer-content">
-				<div class="vertical-align-center w-100 text-left">
-					<div class="text-center">
-						<h3>Author Information</h3>
-						<!-- Flow content, such as text and time element is permitted within address element as per MDN -->
-						<address>
-							&#8220;List-O-Rama&#8221; website created by <a href="mailto:john.jordan@digitalskillsacademy.me">John Jordan</a> in <time datetime="2017-06">June/July 2017</time>, as part of a university design workshop.
-							<br>
-							Copyright © John Jordan<span id="copyright-year">2015</span>
-						</address>
-					</div>
+
+		<section class="todos">
+			<!-- Wrapper div applied for layout purposes -->
+			<div class="" id="task-list-container">
+
+				<h2 >Your Tasks</h2>
+				<!-- This placeholder message is hidden/shown using jQuery -->
+				<p id='empty-list-message'>Hurrah! You have nothing left to do – or so it seems.</p>
+				<ul class="list-group" id="task-list">
+
+
+				</ul>
+				<button class="btn btn-block btn-warning" id="clearChecked">
+					Clear checked tasks
+				</button>
+			</div>
+		</section>
+
+	</main>
+	<footer>
+		<!-- hr element takes width from parent container -->
+		<section class="footer-content">
+			<div class="vertical-align-center w-100 text-left">
+				<div class="text-center">
+					<h3>Author Information</h3>
+					<!-- Flow content, such as text and time element is permitted within address element as per MDN -->
+					<address>
+						&#8220;List-O-Rama&#8221; website created by <a href="mailto:john.jordan@digitalskillsacademy.me">John Jordan</a> in <time datetime="2017-06">June/July 2017</time>, as part of a university design workshop.
+						<br>
+						Copyright © John Jordan<span id="copyright-year">2015</span>
+					</address>
 				</div>
+			</div>
 
-			</section>
-			<!-- end address footer section -->
-		</footer>
-
-	</div>
-
-
+		</section>
+		<!-- end address footer section -->
+	</footer>
 	<!-- Load minified jQuery library from third-party -->
 	<script  src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
 	<!-- Load minified Bootstrap JS file -->
