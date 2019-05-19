@@ -1,22 +1,40 @@
 /* Custom CSS */
-html {
+* {
+  box-sizing: border-box; }
+
+html,
+body {
   height: 100%;
-  min-height: 100vh;}
+  min-height: 100vh; }
 
 body {
   background-color: #DDDDDD;
-  /*The fixed navbar will overlay your other content, unless you add padding to the top of the <body>.
-  Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.*/
-  /*padding-top: 60px;*/
-  font-family: 'Muli', sans-serif;
-  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
-  color: black;
-  height:auto;
-  min-height: 100vh;
-  overflow: scroll;}
+  color: #3c3c3c;
+  overflow: auto;
+  padding-bottom: 160px; }
 
-.container.image-holder {
+.w-100 {
+  width: 100%; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.vertical-align-center {
+  display: table-cell;
+  vertical-align: middle; }
+
+.bg-main {
+  background-color: #FFFFFF;
+  width: 100%;
+  max-width: 500px; }
+
+.image-holder {
+  height: 100%;
   background: url(../img/Laptop_Desk_Image.jpg) no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -25,9 +43,14 @@ body {
   -o-background-size: cover;
   background-size: cover;
   -webkit-box-shadow: 0 10px 5px 2px #999999;
-  box-shadow: 0 10px 5px 2px #999999;
-  height:auto;
-    min-height: 100vh;}
+  box-shadow: 0 10px 5px 2px #999999; }
+
+.user-input {
+  /*Adds margin to top of first element, as fixed header would overlay it otherwise*/
+  margin-top: 50px; }
+
+.todos {
+  margin-top: 15px; }
 
 nav.navbar.navbar-default.navbar-fixed-top, .fixed-nav {
   background-color: #FFFFFF;
@@ -35,27 +58,11 @@ nav.navbar.navbar-default.navbar-fixed-top, .fixed-nav {
   -webkit-box-shadow: 0 1px 0px 0px #999999;
   box-shadow: 0 1px 0px 0px #999999; }
 
-section > div {
-  margin-bottom: 32px;
-  background-color: #AAAAAA;
-  background-color: rgba(240, 240, 240, 0.75); }
-
-  footer {
-    padding-top: 16px;
-    background-color: #AAAAAA;
-    background-color: rgba(240, 240, 240, 0.75); }
-
-section.user-input {
-  /*Adds margin to top of first element, as fixed header would overlay it otherwise*/
-  margin-top: 50px; }
-
-section.todos {
-  margin-top: 15px; }
-
-  .logo {
-    max-height: 66px;
-    margin: 16px auto;
-  }
+main {
+  display: inline-block;
+  height: 100%;
+  max-width: 500px;
+  padding: 15px; }
 
 header {
   margin: 0 0 20px 0;
@@ -64,50 +71,45 @@ header {
   padding: 30px;
   /* padding of 30px all around */ }
 
-  .margin-top {
-    margin-top: 64px;
-  }
-
 header h1 {
   color: #9a9292;
   /* change colour of text */
   font-size: 500%;
   /* increase font size to 500% of default  */
   text-align: center;
-  /* centre text*/
-  font-family: 'Muli', sans-serif; }
+  font-family: 'Gafata', sans-serif; }
 
 h1 {
-  /*margin-top: 40px;*/
   white-space: normal !important;
   word-wrap: break-word; }
 
-h2, p, footer {
-  /*font-family: 'Source Sans Pro';*/
-  /*background-color: #AAAAAA;
-  background-color: rgba(200, 200, 200, 0.7); */ }
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-}
 footer {
-  font-size: 12px; }
+  height: 160px;
+  width: 100%;
+  background-color: #f0f0f0; }
+
+.footer-content {
+  display: table;
+  height: 100%;
+  width: 100%;
+  text-align: center; }
 
 .container .fixed-nav {
   border: none; }
 
 /* START NAVBAR CSS*/
-.navbar-header img {
-  float: left;
-  margin-top: 15px; }
-
 .navbar.navbar-default.navbar-fixed-top {
+  max-height: 60px;
+  text-align: center;
   background-color: #FFFFFF; }
 
 /* The next two classes ensure that brand images in the nav bar are contained within the navbar itself */
-.navbar-brand {
+.navbar-logo {
+  float: none;
+  display: inline-block;
+  max-height: 50px;
   margin: 0;
-  padding: 0; }
+  padding: 5px; }
 
 /* END NAVBAR CSS*/
 /*Needed to make this declaration more specific than just 'input'*/
@@ -138,7 +140,6 @@ li.custom-icon:before {
   top: 11px; }
 
 li.custom-icon.checked:before {
-  color: #F0AD4E; /* Warning colour, from Bootstrap defaults */
   content: '\f046';
   position: absolute;
   /*16 pixels to left to stay in line with other Bootstrap elements*/
